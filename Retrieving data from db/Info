@@ -1,0 +1,8 @@
+If the list is of Object[] i.e..array of objects where we want to retrieve multiple columns we can retrieve them like o[0],o[1]...
+If the list is of Class type..we can access them like c.getter_methods();
+If we need retrieve all rows including duplicates use query.list() and use query.uniqueList() if we want to retrieve only unique objects both provided by Query Interface.
+There are 2 types of parameters in hibernate - Named and Positional
+Named is denoted with colon(:) preceded to column name, Example- from prodcuts where pid:=pid
+q.setParameter("pid",7);
+Positional parameter is denoted by ?, Example- from products where pid=?
+q.setParameter(1,7) - where 1 is a position
