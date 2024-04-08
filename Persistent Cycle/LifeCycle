@@ -1,0 +1,7 @@
+There are 3 stages in hibernate objects life
+Transient,Persistent,Detach
+objects will enter transient state when they're created...i.e, at 'new' keyword.
+Then,the objects will go to persistent state when we set values and save them with session.persist(object)
+In persistent state..although we change the values it will automatically sync to database.
+Also..we shouldn't run and try again with same values which is a primary key.
+After the object is detached with session.evict(object)..changes made wont sync to the database
