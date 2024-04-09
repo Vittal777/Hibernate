@@ -1,0 +1,4 @@
+SQL Queries in Hibernate is known as Native Queries
+NativeQuery is an interface which gives createNativeQuery() method fro creating sql queries.
+we should use addEntity() to specify the entity type to which the query results should b mapped
+There's no need to use addEntity() when we aren't returning any rows but only aggregates like count,sum etc...
