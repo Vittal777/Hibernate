@@ -1,0 +1,9 @@
+GET vs LOAD
+The get method is used to retrieve an object by its primary key.
+If the object with the specified primary key exists in the database, get returns the actual object.
+If the object is not found in the database, get returns null.(returned NullPointerException in my case)
+
+load method also retrieves an object by its primary key.
+load returns a proxy object (a placeholder) without hitting the database immediately. The actual database query is deferred until the proxy is accessed.
+If the object is not found in the database, invoking methods on the proxy may result in a ObjectNotFoundException.
+load is useful when you need to initialize an object lazily and don't need its data immediately.
