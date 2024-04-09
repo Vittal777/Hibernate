@@ -1,0 +1,3 @@
+After writing all the steps sufficient for  connecting hibernate
+Write a constructor initiating objects setting values for columns in a table.
+Lastly..session.persist(object) to insert in db.
