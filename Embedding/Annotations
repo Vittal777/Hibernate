@@ -1,0 +1,8 @@
+@Embeddable : to annotate a class whose instances are embedded as components within other entity classes.
+Like in given code...Productprop class is given @Embeddable annotaion on top of it making it embed in Product class.
+The properties of the class annotated with @Embeddable are mapped directly to the columns of the table containing the owning entity.
+
+@Embedded : to embed an @Embeddable class within an entity class.
+Like in Product class...we intialized private Productprop props;
+Since Productprops isn't a default datatype like int,String etc...we should instruct that Productprop class want to embed in Product class.
+Soo...we use @Embedded annotation on top of it.
