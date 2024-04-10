@@ -1,0 +1,25 @@
+Setting up a JPA in eclipse..create a maven project 
+You dont need the steps like Configuration,SessionFactory etc...which are in hiberante
+You just need the EntityManagerFactory and EntityManager
+In the project directory..there will be a main folder in src...right click on it create a folder 'resources'
+Then right click on resources and create a folder 'META-INF'...this is an appropriate path.
+In the META-INF folder create the xml file..
+
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+    version="2.2">
+    
+    <persistence-unit name="persis" transaction-type="RESOURCE_LOCAL">
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/hibernate"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="vittal777"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>
+
+The name of persistence-unit should be mention in the createEntityManagerFactory("persis")
