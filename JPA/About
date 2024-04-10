@@ -1,0 +1,6 @@
+Java specification for accessing, persisting, and managing data between Java objects and relational databases.
+EntityManagerFactory is a key interface in the JPA responsible for creating and managing EntityManager instances, factory for EntityManager objects, allowing applications to obtain EntityManager instances configured for a specific persistence unit.
+EntityManager is a key interface in JPA that manages the lifecycle of entities and provides methods for performing CRUD operations on entities.
+In summary..we've many orm tools such as Hibernate,eclipselink,ibatis etc..
+So..if we're familiar with hibernate and client wants us to work with other orm tool which isn't familiar for us.
+In that use..JPA is useful by means of standardizing everything across all tools and onnly have modify some lines and configure xml file.
